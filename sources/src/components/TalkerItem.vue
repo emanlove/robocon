@@ -1,5 +1,7 @@
 <template>
   <div :class="header === '' && type === 'workshop' ? 'mb-5 pb-4' : 'mb-4'" :style="header === '' && author !== 'Asko Soukka' && author !== 'Pekka Klärck' && type === 'workshop' ? 'border-bottom: dashed 2px #20f73f' : ''">
+    <div v-if="anchor_link !==''" v-bind:id="anchor_link" v-bind:style="{ paddingTop: '40px', marginTop: '-40px' }">
+    </div>
     <div v-if="margin" class="mt-5" />
     <div v-if="header !== ''">
       <h1 class="white no-arrow mt-4">{{ header }}</h1>
